@@ -18,7 +18,7 @@ const customConfig = defineConfig({
     tokens: {
       colors: {
         slate: {
-          100: { value: 'hsl(0, 0%, 100%)' },
+          100: { value: 'hsl(202, 86%, 94%)' },
           300: { value: 'hsl(203, 41%, 72%)' },
           500: { value: 'hsl(200, 26%, 54%)' },
           700: { value: 'hsl(200, 24%, 40%)' },
@@ -29,6 +29,9 @@ const customConfig = defineConfig({
         },
         red: {
           50: { value: 'hsl(4, 69%, 50%)' }
+        },
+        white: {
+          50: { value: '#ffffff' }
         }
       },
     },
