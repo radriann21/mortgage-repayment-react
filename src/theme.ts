@@ -21,8 +21,9 @@ const customConfig = defineConfig({
           100: { value: 'hsl(202, 86%, 94%)' },
           300: { value: 'hsl(203, 41%, 72%)' },
           500: { value: 'hsl(200, 26%, 54%)' },
-          700: { value: 'hsl(200, 24%, 40%)' },
-          900: { value: 'hsl(202, 55%, 16%)' }
+          700: { value: 'hsl(200, 31%, 56%)' },
+          900: { value: 'hsl(202, 55%, 16%)' },
+          950: { value: 'hsl(202, 56%, 12%)' }
         },
         lime: {
           50: { value: 'hsl(61, 70%, 52%)' },

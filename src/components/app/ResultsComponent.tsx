@@ -1,5 +1,6 @@
-import { Flex, Box, Heading, Text, Image } from "@chakra-ui/react"
-import illustrationEmpty from "@/assets/illustration-empty.svg"
+import { Flex } from "@chakra-ui/react"
+import { PlaceholderScreen } from "./PlaceholderScreen"
+// import { ResultsScreen } from "./ResultsScreen"
 
 export const ResultsComponent = () => {
   return (
@@ -14,18 +15,7 @@ export const ResultsComponent = () => {
       h={{ base: "fit-content", md: "450px" }}
       p="2rem"
     >
-      <Box
-        as="section"
-      >
-        <Image mx="auto" src={illustrationEmpty} alt="illustration empty" />
-        <Box
-          mt="1rem"
-          textAlign="center"
-        >
-          <Heading color="white">Results shown here</Heading>
-          <Text color="slate.300">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</Text>
-        </Box>
-      </Box>
+      <PlaceholderScreen />
     </Flex>
   )
 }
