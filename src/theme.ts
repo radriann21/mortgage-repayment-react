@@ -4,7 +4,7 @@ const textStyles = defineTextStyles({
   global: {
     description: 'The global font of the aplication',
     value: {
-      fontFamily: "Plus Jakarta Sans",
+      fontFamily: "P'lus Jakarta Sans' sans-serif",
       fontSize: "16px",
       letterSpacing: "0",
       textDecoration: "none",

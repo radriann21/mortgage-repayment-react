@@ -1,6 +1,16 @@
 import { Box, Heading, Text, Separator } from "@chakra-ui/react"
 
-export const ResultsScreen = () => {
+type ResultsScreenProps = {
+  monthlyPayment: number;
+  totalPayment: number
+}
+
+export const ResultsScreen = ({ monthlyPayment, totalPayment }: ResultsScreenProps) => {
+
+  const transformNumber = (number: number): string => {
+    return number.toLocaleString('en-UK', { minimumFractionDigits: 2, maximumFractionDigits: 5, })
+  }
+
   return (
     <Box
       as="section"
@@ -24,14 +34,14 @@ export const ResultsScreen = () => {
       >
         <Box mb="2rem">
           <Text color="slate.500" fontSize="14px" mb=".8rem">Your monthly repayments</Text>
-          <Heading color="lime.50" fontSize="38px">£1,797.74</Heading>
+          <Heading color="lime.50" fontSize="38px">£{transformNumber(monthlyPayment)}</Heading>
         </Box>
 
         <Separator colorPalette="gray" />
 
         <Box my="1rem">
           <Text color="slate.500" fontSize="14px" mb=".4rem">Total you'll repay over the term</Text>
-          <Heading color="white">£539,322.94</Heading>
+          <Heading color="white">£{transformNumber(totalPayment)}</Heading>
         </Box>
       </Box>
     </Box>

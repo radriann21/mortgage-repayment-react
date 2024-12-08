@@ -12,7 +12,7 @@ export const PlaceholderScreen = () => {
         textAlign="center"
       >
         <Heading color="white">Results shown here</Heading>
-        <Text color="slate.300">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</Text>
+        <Text color="slate.300" fontSize={{ base: 'initial', md: '14px' }}>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</Text>
       </Box>
     </Box>
   )

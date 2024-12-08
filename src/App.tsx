@@ -11,12 +11,13 @@ function App() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      flexDirection={{ base: "column", md: "row" }}
       bgColor="slate.100"
       color="black"
     >
-      <RepaymentForm />
-      <ResultsComponent />
+      <Box display="flex" alignItems="center" justifyContent="center" h="fit-content" flexDirection={{ base: "column", md: "row" }}>
+        <RepaymentForm />
+        <ResultsComponent />
+      </Box>
     </Box>
   )
 }

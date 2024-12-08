@@ -1,21 +1,31 @@
 import { Flex } from "@chakra-ui/react"
 import { PlaceholderScreen } from "./PlaceholderScreen"
-// import { ResultsScreen } from "./ResultsScreen"
+import { ResultsScreen } from "./ResultsScreen"
+
+import { useContext } from "react"
+import { CalculatorContext } from "@/context/CalculatorContext"
 
 export const ResultsComponent = () => {
+
+  const { monthlyPayment, totalPayment } = useContext(CalculatorContext)
+
   return (
     <Flex
       as="section"
-      w={{ base: "100%", md: "28%" }}
+      w={{ base: "100%", md: "35%" }}
       align="center"
       justify="center"
       bgColor="slate.900"
-      borderRadius={{ base: "0", md: "10px" }}
-      borderTopLeftRadius="0px"
-      h={{ base: "fit-content", md: "450px" }}
+      borderRadius={{ base: "0px", md: "10px" }}
+      borderBottomLeftRadius={{ base: '0px', md: '20%' }}
+      minH={{ base: "fit-content", md: "520px" }}
       p="2rem"
     >
-      <PlaceholderScreen />
+      {
+        monthlyPayment !== 0
+          ? (<ResultsScreen monthlyPayment={monthlyPayment} totalPayment={totalPayment} />)
+          : (<PlaceholderScreen />)
+      }
     </Flex>
   )
 }
