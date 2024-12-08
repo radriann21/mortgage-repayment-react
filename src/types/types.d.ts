@@ -9,6 +9,15 @@ export type CalculatorContextType = {
   totalPayment: number,
 }
 
+export type CalculatorContextTypeWithFunctions = CalculatorContextType & {
+  handleMortgageAmount: (evt: React.FormEvent<HTMLInputElement>) => void;
+  handleMortgageTerm: (evt: React.FormEvent<HTMLInputElement>) => void;
+  handleInterestRate: (evt: React.FormEvent<HTMLInputElement>) => void;
+  resetCalculator: () => void;
+  handleMortgageType: (evt: React.FormEvent | never) => void;
+  calculateRepayments: () => void;
+};
+
 export type CalculatorContextProviderProps = {
   children?: ReactNode;
 }
